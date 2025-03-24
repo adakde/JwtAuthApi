@@ -17,6 +17,7 @@
 - **Swagger UI** with JWT support
 - **Clean Architecture** pattern
 ![image](https://github.com/user-attachments/assets/63fa45f9-d1fa-4a02-886f-d73bed0ad7d0)
+![image](https://github.com/user-attachments/assets/e10e432a-d2c6-4ca4-a9fc-badb18a6b8ea)
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -52,7 +53,6 @@ Apply database migrations:
 
 dotnet ef database update
 
-![image](https://github.com/user-attachments/assets/e10e432a-d2c6-4ca4-a9fc-badb18a6b8ea)
 🔧 Development
 # Run the application
 dotnet run
