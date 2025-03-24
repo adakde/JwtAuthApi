@@ -16,7 +16,7 @@
 - **Entity Framework Core** with SQL Server
 - **Swagger UI** with JWT support
 - **Clean Architecture** pattern
-
+![image](https://github.com/user-attachments/assets/63fa45f9-d1fa-4a02-886f-d73bed0ad7d0)
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -36,3 +36,41 @@ cd JwtAuthApi
 dotnet restore
 
 # Configure database connection in appsettings.json
+🛠️ Configuration
+Update appsettings.json:
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=JwtAuthDb;Trusted_Connection=True;"
+  },
+  "Jwt": {
+    "Token": "your-512-bit-secret-key-here",
+    "Issuer": "https://localhost:5001",
+    "Audience": "https://localhost:5001",
+  }
+}
+Apply database migrations:
+
+dotnet ef database update
+
+![image](https://github.com/user-attachments/assets/e10e432a-d2c6-4ca4-a9fc-badb18a6b8ea)
+🔧 Development
+# Run the application
+dotnet run
+
+# Run with watch mode
+dotnet watch run
+
+# Generate new migration
+dotnet ef migrations add MigrationName
+
+🏗️ Project Structure
+JwtAuthApi/
+├── Controllers/        # API endpoints
+├── Data/              # Database context
+├── Models/            # DTOs and entities
+├── Services/          # Business logic
+├── Migrations/        # Database migrations
+└── appsettings.json   # Configuration
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
